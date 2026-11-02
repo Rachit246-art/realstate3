@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us — Heritage & Architectural Vision | ALTAIR RESIDENCES</title>
+  <meta name="description" content="Discover Altair Residences: a 25-year legacy of shaping extraordinary living experiences through visionary design, sustainable development, and architectural purity.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' font-family='serif' fill='%23987553'>A</text></svg>">
+
+  <!-- Google Fonts: Cormorant Garamond, Manrope, DM Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- GSAP & ScrollTrigger -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+<body class="luxury-body">
+
+  <!-- Custom Cursor Elements -->
+  <div class="custom-cursor-dot" id="cursorDot" aria-hidden="true"></div>
+  <div class="custom-cursor-ring" id="cursorRing" aria-hidden="true"></div>
+
+  <!-- Scroll Progress Indicator -->
+  <div class="scroll-progress-container" aria-hidden="true">
+    <div class="scroll-progress-bar" id="scrollProgressBar"></div>
+  </div>
+
+  <!-- Page Reveal Curtain -->
+  <div class="page-loader" id="pageLoader" aria-hidden="true">
+    <div class="loader-content">
+      <div class="loader-brand">ALTAIR</div>
+      <div class="loader-sub">HERITAGE & VISION</div>
+      <div class="loader-line"><div class="loader-line-fill"></div></div>
+    </div>
+  </div>
+
+  <!-- Navigation Bar -->
+  <header class="altair-navbar" id="altairNavbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand" aria-label="Altair Residences Home">
+        <span class="brand-title">ALTAIR</span>
+        <span class="brand-subtitle">RESIDENCES</span>
+      </a>
+
+      <nav class="nav-desktop" aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="properties.html" class="nav-link">Properties</a></li>
+          <li><a href="about.html" class="nav-link active">About</a></li>
+          <li><a href="amenities.html" class="nav-link">Amenities</a></li>
+          <li><a href="communities.html" class="nav-link">Communities</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button type="button" class="btn-schedule-nav" id="openScheduleModalBtn" aria-label="Schedule a Visit">
+          <span>Schedule a Visit</span>
+        </button>
+        <button type="button" class="btn-hamburger" id="hamburgerBtn" aria-label="Toggle Navigation Menu">
+          <span class="hamburger-line line-1"></span>
+          <span class="hamburger-line line-2"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+    <div class="drawer-overlay" id="drawerOverlay"></div>
+    <div class="drawer-panel">
+      <div class="drawer-header">
+        <div class="drawer-brand">
+          <span class="brand-title">ALTAIR</span>
+          <span class="brand-subtitle">RESIDENCES</span>
+        </div>
+        <button type="button" class="drawer-close-btn" id="drawerCloseBtn" aria-label="Close Navigation Menu">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+      <nav class="drawer-nav">
+        <ul class="drawer-links">
+          <li><a href="index.html" class="drawer-link"><span class="drawer-link-num">01</span> Home</a></li>
+          <li><a href="properties.html" class="drawer-link"><span class="drawer-link-num">02</span> Properties</a></li>
+          <li><a href="about.html" class="drawer-link"><span class="drawer-link-num">03</span> About Us</a></li>
+          <li><a href="amenities.html" class="drawer-link"><span class="drawer-link-num">04</span> Amenities</a></li>
+          <li><a href="communities.html" class="drawer-link"><span class="drawer-link-num">05</span> Communities</a></li>
+          <li><a href="contact.html" class="drawer-link"><span class="drawer-link-num">06</span> Contact</a></li>
+        </ul>
+      </nav>
+      <div class="drawer-footer">
+        <button type="button" class="btn-primary-bronze full-width modal-trigger-btn">
+          Schedule a Private Tour
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================================================================
+       ABOUT HERO SECTION (ASYMMETRIC SPLIT)
+       =================================================================== -->
+  <section class="page-hero-editorial">
+    <div class="container-wide">
+      <div class="page-hero-grid">
+        
+        <div class="page-hero-text">
+          <div class="eyebrow">
+            <span class="eyebrow-dash"></span>
+            <span>FOUNDED ON EXCELLENCE</span>
+          </div>
+
+          <h1 class="page-hero-title">
+            Architects of a<br>
+            <span class="italic-serif bronze-accent">Harmonious Tomorrow.</span>
+          </h1>
+
+          <p class="page-hero-desc">
+            For a quarter-century, Altair Residences has pioneered the nexus of visionary architecture, ecological harmony, and generational longevity. We do not construct real estate — we sculpt timeless residential heirlooms that elevate the spirit and endure across eras.
+          </p>
+
+          <div class="about-hero-stats-row">
+            <div class="stat-cell">
+              <span class="st-num">25+</span>
+              <span class="st-txt">Years of Mastery</span>
+            </div>
+            <div class="st-sep"></div>
+            <div class="stat-cell">
+              <span class="st-num">50+</span>
+              <span class="st-txt">Iconic Landmarks</span>
+            </div>
+            <div class="st-sep"></div>
+            <div class="stat-cell">
+              <span class="st-num">100%</span>
+              <span class="st-txt">Net-Zero Commitment</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="page-hero-spotlight">
+          <div class="about-hero-image-wrap">
+            <img src="assets/about-hero.jpg" alt="Altair Master Architectural Pavilion" class="about-hero-main-img">
+            <div class="about-hero-quote-card">
+              <span class="q-icon">“</span>
+              <p class="q-body">Architecture must be an instrument of peace, daylight, and nature. It must honor the land upon which it stands.</p>
+              <span class="q-author">Altair Master Architectural Charter</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       THE THREE PILLARS (EDITORIAL PHILOSOPHY)
+       =================================================================== -->
+  <section class="section-pillars">
+    <div class="container-wide">
+      
+      <div class="signature-top-bar">
+        <div class="signature-eyebrow-wrap">
+          <span class="eyebrow-small">OUR PHILOSOPHY</span>
+          <h2 class="signature-heading">The Three Pillars of Altair.</h2>
+        </div>
+        <p class="signature-lead-text">
+          Every blueprint adheres to an uncompromising manifesto that balances spatial grandeur with planetary responsibility.
+        </p>
+      </div>
+
+      <div class="pillars-grid">
+        
+        <div class="pillar-card">
+          <div class="pillar-num">01</div>
+          <h3 class="pillar-title">Architectural Purity</h3>
+          <p class="pillar-desc">
+            We reject ephemeral trends in favor of timeless proportional harmony, sculptural honest concrete, honed Italian travertine, and bespoke joinery that matures with graceful patina.
+          </p>
+        </div>
+
+        <div class="pillar-card">
+          <div class="pillar-num">02</div>
+          <h3 class="pillar-title">Biophilic Integration</h3>
+          <p class="pillar-desc">
+            Every home dissolves the boundary between indoors and the natural realm. We harness prevailing micro-climates, solar orientations, and sensory flora to cultivate restorative serenity.
+          </p>
+        </div>
+
+        <div class="pillar-card">
+          <div class="pillar-num">03</div>
+          <h3 class="pillar-title">Generational Longevity</h3>
+          <p class="pillar-desc">
+            Built with structural engineered lifespans exceeding a century, our estates are crafted to safeguard family legacies, offering timeless sanctuary for generations to come.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       25-YEAR MILESTONE TIMELINE
+       =================================================================== -->
+  <section class="section-timeline dark-theme-section">
+    <div class="container-wide">
+      
+      <div class="amenities-header-center">
+        <div class="eyebrow eyebrow-champagne">
+          <span class="eyebrow-dash bronze-dash"></span>
+          <span>QUARTER-CENTURY JOURNEY</span>
+        </div>
+        <h2 class="section-heading-serif light-text">
+          A Legacy of Milestones
+        </h2>
+        <p class="section-desc-light center-max">
+          From our inaugural coastal residence in 2001 to our platinum-certified sky mansions in 2026, trace our evolution of architectural excellence.
+        </p>
+      </div>
+
+      <div class="timeline-track-wrapper">
+        <div class="timeline-items-grid">
+          
+          <div class="timeline-card">
+            <span class="tl-year">2001</span>
+            <h4 class="tl-title">The Inception</h4>
+            <p class="tl-desc">Founded as an atelier studio committed to bespoke private coastal residences in Goa, reimagining tropical modernist architecture.</p>
+          </div>
+
+          <div class="timeline-card">
+            <span class="tl-year">2008</span>
+            <h4 class="tl-title">Urban Penthouses</h4>
+            <p class="tl-desc">Pioneered cantilevered botanical terraces in Bangalore, introducing net-zero rainwater harvesting to luxury enclaves.</p>
+          </div>
+
+          <div class="timeline-card">
+            <span class="tl-year">2016</span>
+            <h4 class="tl-title">The Skyline Leap</h4>
+            <p class="tl-desc">Completed our first vertical sky mansion tower in South Mumbai, winning the Prix Versailles for residential high-rise architecture.</p>
+          </div>
+
+          <div class="timeline-card active-tl">
+            <span class="tl-year">2026</span>
+            <h4 class="tl-title">Altair Heights & Beyond</h4>
+            <p class="tl-desc">Unveiling 52 flagship residences at Worli Sea Face with private helipads, IGBC Platinum net-zero energy, and global concierge.</p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       LEADERSHIP & ARCHITECTURAL BOARD
+       =================================================================== -->
+  <section class="section-leadership">
+    <div class="container-wide">
+      
+      <div class="signature-top-bar">
+        <div class="signature-eyebrow-wrap">
+          <span class="eyebrow-small">LEADERSHIP</span>
+          <h2 class="signature-heading">The Visionaries Behind Altair.</h2>
+        </div>
+        <p class="signature-lead-text">
+          Guided by international architects, environmental engineers, and heritage preservationists.
+        </p>
+      </div>
+
+      <div class="leadership-grid">
+        
+        <div class="leader-card">
+          <div class="leader-photo-box">
+            <img src="assets/leader-1.jpg" alt="Alistair Vance, Chief Architect">
+          </div>
+          <div class="leader-info">
+            <h3 class="leader-name">Lord Alistair Vance</h3>
+            <span class="leader-role">Founder & Chief Architectural Director</span>
+            <p class="leader-bio">
+              Former partner at Foster + Partners and recipient of the RIBA Gold Medal. Alistair leads Altair's master planning with a focus on biophilic structural innovation.
+            </p>
+          </div>
+        </div>
+
+        <div class="leader-card">
+          <div class="leader-photo-box">
+            <img src="assets/leader-2.jpg" alt="Dr. Sunita Rao, Principal Environmental Designer">
+          </div>
+          <div class="leader-info">
+            <h3 class="leader-name">Dr. Sunita Rao</h3>
+            <span class="leader-role">Principal Environmental & Biophilic Designer</span>
+            <p class="leader-bio">
+              Pioneering researcher at MIT Urban Ecology with 18 international patents in bioclimatic facade engineering and regenerative micro-climate circularity.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Premium Footer -->
+  <footer class="altair-footer">
+    <div class="container-wide">
+      <div class="footer-top-row">
+        <div class="footer-left">
+          <a href="index.html" class="footer-brand">
+            <span class="brand-title">ALTAIR</span>
+            <span class="brand-subtitle">RESIDENCES</span>
+          </a>
+          <p class="footer-tagline">Extraordinary Living.</p>
+        </div>
+
+        <div class="footer-center">
+          <ul class="footer-nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="properties.html">Properties</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="amenities.html">Amenities</a></li>
+            <li><a href="communities.html">Communities</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-right">
+          <div class="footer-social-icons">
+            <a href="#" class="social-icon-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path></svg></a>
+            <a href="#" class="social-icon-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+            <a href="#" class="social-icon-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-divider"></div>
+
+      <div class="footer-bottom-row">
+        <div class="footer-copy">© 2026 Altair Residences. All rights reserved.</div>
+        <div class="footer-decorative-tagline">SPACES FOR A BRIGHTER TOMORROW.</div>
+        <div class="footer-legal-links"><a href="#" class="legal-link">Privacy Policy</a><span class="legal-sep">•</span><a href="#" class="legal-link">Terms of Service</a></div>
+      </div>
+
+      <!-- Footer Credit -->
+      <div class="footer-credit">
+        Altair Residences | Made with <span class="credit-heart">&#10084;</span> by <a href="#" class="credit-link">Regortz</a>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- 1. SCHEDULE A VISIT MODAL -->
+  <div class="modal-backdrop" id="scheduleModal" aria-hidden="true">
+    <div class="modal-card">
+      <button type="button" class="modal-close-btn" id="scheduleModalClose" aria-label="Close modal">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+
+      <div class="modal-header">
+        <div class="eyebrow eyebrow-champagne">
+          <span class="eyebrow-dash bronze-dash"></span>
+          <span>PRIVATE CONCIERGE</span>
+        </div>
+        <h3 class="modal-title">Schedule a Private Residence Tour</h3>
+        <p class="modal-subtitle">Experience Altair's architectural excellence in person. Personalized private viewings available across our prime estates.</p>
+      </div>
+
+      <form class="schedule-form" id="scheduleVisitForm">
+        <div class="form-grid">
+          
+          <div class="form-group">
+            <label for="propertySelect">Select Residence *</label>
+            <select id="propertySelect" required>
+              <option value="mumbai">The Altair Heights — Mumbai (₹12.5 Cr+)</option>
+              <option value="goa">Elysian Villa — Goa (₹8.2 Cr+)</option>
+              <option value="bangalore">The Grove Residences — Bangalore (₹6.9 Cr+)</option>
+              <option value="delhi">Altair Imperial Pavilion — Delhi (₹14.0 Cr+)</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="visitDate">Preferred Date *</label>
+            <input type="date" id="visitDate" required min="2026-11-01">
+          </div>
+
+          <div class="form-group">
+            <label for="visitTime">Preferred Time Slot *</label>
+            <select id="visitTime" required>
+              <option value="morning">Morning Sanctuary Tour (10:00 AM)</option>
+              <option value="afternoon">Afternoon Natural Daylight Tour (02:00 PM)</option>
+              <option value="sunset" selected>Golden Hour Sunset Tour (05:00 PM)</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="clientName">Full Name *</label>
+            <input type="text" id="clientName" placeholder="e.g. Lord Alistair Vance" required>
+          </div>
+
+          <div class="form-group">
+            <label for="clientEmail">Email Address *</label>
+            <input type="email" id="clientEmail" placeholder="e.g. alistair@vance-holdings.com" required>
+          </div>
+
+          <div class="form-group">
+            <label for="clientPhone">Contact Number *</label>
+            <input type="tel" id="clientPhone" placeholder="+91 98200 XXXXX" required>
+          </div>
+
+        </div>
+
+        <div class="form-check-group">
+          <input type="checkbox" id="chauffeurCheck" checked>
+          <label for="chauffeurCheck">Request complimentary executive Mercedes Maybach / Range Rover chauffeur pickup</label>
+        </div>
+
+        <div class="modal-form-actions">
+          <button type="submit" class="btn-pill-champagne-large full-width" id="submitTourBtn">
+            <span>Confirm Private Site Visit</span>
+            <span class="circle-arrow-green">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            </span>
+          </button>
+        </div>
+      </form>
+
+      <!-- Success Notification View -->
+      <div class="modal-success-state" id="modalSuccessState">
+        <div class="success-icon-circle">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+        </div>
+        <h4 class="success-title">Your Private Tour is Confirmed</h4>
+        <p class="success-desc">
+          An Altair Senior Relationship Director will contact you within two hours to finalize your tailored itinerary and chauffeur arrangement.
+        </p>
+        <button type="button" class="btn-editorial-pill" id="closeSuccessBtn">
+          <span>Return to Altair</span>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 2. WATCH OUR STORY VIDEO MODAL -->
+  <div class="modal-backdrop" id="videoModal" aria-hidden="true">
+    <div class="video-modal-card">
+      <button type="button" class="video-modal-close" id="videoModalClose" aria-label="Close video">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+
+      <div class="video-container">
+        <div class="video-mockup">
+          <img src="assets/cta-villa.jpg" alt="Altair Cinematic Villa Showcase" class="video-bg-img">
+          <div class="video-overlay-player">
+            <div class="video-brand-tag">ALTAIR RESIDENCES ARCHITECTURAL CINEMA</div>
+            <div class="video-center-controls">
+              <div class="video-play-large" id="playToggleBtn">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+              </div>
+            </div>
+            <div class="video-bottom-bar">
+              <span class="v-time">01:42 / 03:50</span>
+              <div class="v-progress-track">
+                <div class="v-progress-bar"></div>
+              </div>
+              <span class="v-quality">4K MASTER ARCHIVE</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. PROPERTY QUICK VIEW MODAL -->
+  <div class="modal-backdrop" id="propertyDetailModal" aria-hidden="true">
+    <div class="prop-detail-card">
+      <button type="button" class="modal-close-btn" id="propDetailClose" aria-label="Close property detail">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+
+      <div class="prop-detail-layout">
+        <div class="prop-detail-gallery">
+          <img src="assets/property-mumbai.jpg" alt="Property Detail Image" id="modalPropImage" class="detail-main-img">
+        </div>
+        <div class="prop-detail-content">
+          <div class="eyebrow">
+            <span class="eyebrow-dash"></span>
+            <span id="modalPropLocation">MUMBAI</span>
+          </div>
+          <h3 class="prop-detail-title" id="modalPropTitle">The Altair Heights</h3>
+          <p class="prop-detail-price" id="modalPropPrice">₹12.5 Cr onwards</p>
+          <p class="prop-detail-desc" id="modalPropDesc">
+            Rising above the Arabian coastline, The Altair Heights offers 52 limited-edition sky mansions with double-height ceiling voids, private infinity plunge pools, and uninterrupted ocean sunsets.
+          </p>
+
+          <div class="prop-detail-specs-grid">
+            <div class="spec-cell">
+              <span class="spec-label">Configuration</span>
+              <span class="spec-val" id="modalPropConfig">4 & 5 BHK</span>
+            </div>
+            <div class="spec-cell">
+              <span class="spec-label">Carpet Area</span>
+              <span class="spec-val" id="modalPropArea">4,800 – 7,200 sq.ft.</span>
+            </div>
+            <div class="spec-cell">
+              <span class="spec-label">Handover</span>
+              <span class="spec-val">Q4 2026</span>
+            </div>
+            <div class="spec-cell">
+              <span class="spec-label">Certification</span>
+              <span class="spec-val">IGBC Platinum Net-Zero</span>
+            </div>
+          </div>
+
+          <div class="prop-detail-actions">
+            <button type="button" class="btn-primary-bronze modal-trigger-btn" id="modalBookTourBtn">
+              <span>Book Private Showcase</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main JavaScript -->
+
+  <script src="js/script.js"></script>
+</body>
+</html>
+

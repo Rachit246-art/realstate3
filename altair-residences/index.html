@@ -1,0 +1,1494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ALTAIR RESIDENCES — Extraordinary Living | Ultra-Luxury Real Estate</title>
+  <meta name="description" content="Discover rare properties, iconic locations and a lifestyle crafted for a better tomorrow. Ultra-luxury residences in Mumbai, Bangalore, Delhi and Goa by Altair Residences.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' font-family='serif' fill='%23987553'>A</text></svg>">
+
+  <!-- Google Fonts: Cormorant Garamond, Manrope, DM Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- GSAP & ScrollTrigger -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+<body class="luxury-body">
+
+  <!-- Custom Cursor Elements -->
+  <div class="custom-cursor-dot" id="cursorDot" aria-hidden="true"></div>
+  <div class="custom-cursor-ring" id="cursorRing" aria-hidden="true"></div>
+
+  <!-- Scroll Progress Indicator -->
+  <div class="scroll-progress-container" aria-hidden="true">
+    <div class="scroll-progress-bar" id="scrollProgressBar"></div>
+  </div>
+
+  <!-- Page Reveal Curtain -->
+  <div class="page-loader" id="pageLoader" aria-hidden="true">
+    <div class="loader-content">
+      <div class="loader-brand">ALTAIR</div>
+      <div class="loader-sub">RESIDENCES</div>
+      <div class="loader-line"><div class="loader-line-fill"></div></div>
+    </div>
+  </div>
+
+  <!-- ===================================================================
+       SECTION 01: PREMIUM NAVIGATION & HERO
+       =================================================================== -->
+  
+  <!-- Navigation Bar -->
+  <header class="altair-navbar" id="altairNavbar">
+    <div class="nav-inner">
+      <!-- Left: Logo -->
+      <a href="#hero" class="nav-brand" aria-label="Altair Residences Home">
+        <span class="brand-title">ALTAIR</span>
+        <span class="brand-subtitle">RESIDENCES</span>
+      </a>
+
+      <!-- Center: Nav Links -->
+      <nav class="nav-desktop" aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link active">Home</a></li>
+          <li><a href="properties.html" class="nav-link">Properties</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="amenities.html" class="nav-link">Amenities</a></li>
+          <li><a href="communities.html" class="nav-link">Communities</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Right: Action Buttons -->
+      <div class="nav-actions">
+        <button type="button" class="btn-schedule-nav" id="openScheduleModalBtn" aria-label="Schedule a Visit">
+          <span>Schedule a Visit</span>
+        </button>
+        <button type="button" class="btn-hamburger" id="hamburgerBtn" aria-label="Toggle Navigation Menu">
+          <span class="hamburger-line line-1"></span>
+          <span class="hamburger-line line-2"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+    <div class="drawer-overlay" id="drawerOverlay"></div>
+    <div class="drawer-panel">
+      <div class="drawer-header">
+        <div class="drawer-brand">
+          <span class="brand-title">ALTAIR</span>
+          <span class="brand-subtitle">RESIDENCES</span>
+        </div>
+        <button type="button" class="drawer-close-btn" id="drawerCloseBtn" aria-label="Close Navigation Menu">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+      <nav class="drawer-nav">
+        <ul class="drawer-links">
+          <li><a href="index.html" class="drawer-link"><span class="drawer-link-num">01</span> Home</a></li>
+          <li><a href="properties.html" class="drawer-link"><span class="drawer-link-num">02</span> Properties</a></li>
+          <li><a href="about.html" class="drawer-link"><span class="drawer-link-num">03</span> About Us</a></li>
+          <li><a href="amenities.html" class="drawer-link"><span class="drawer-link-num">04</span> Amenities</a></li>
+          <li><a href="communities.html" class="drawer-link"><span class="drawer-link-num">05</span> Communities</a></li>
+          <li><a href="contact.html" class="drawer-link"><span class="drawer-link-num">06</span> Contact</a></li>
+        </ul>
+      </nav>
+      <div class="drawer-footer">
+        <button type="button" class="btn-primary-bronze full-width modal-trigger-btn">
+          Schedule a Private Tour
+        </button>
+        <div class="drawer-contact-info">
+          <p class="drawer-phone">+91 22 8900 1200</p>
+          <p class="drawer-email">concierge@altairresidences.com</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- HERO SECTION -->
+  <section class="hero-section" id="hero">
+    <div class="hero-layout">
+      
+      <!-- HERO LEFT COLUMN (30-35% width) -->
+      <div class="hero-left">
+        <div class="hero-left-content">
+          
+          <!-- Eyebrow -->
+          <div class="eyebrow hero-eyebrow">
+            <span class="eyebrow-dash"></span>
+            <span>EXTRAORDINARY LIVING</span>
+          </div>
+
+          <!-- Main Heading -->
+          <h1 class="hero-heading">
+            <span class="hero-heading-line line-dark">Homes</span>
+            <span class="hero-heading-line line-accent">Beyond</span>
+            <span class="hero-heading-line line-bronze">Ordinary.</span>
+          </h1>
+
+          <!-- Description -->
+          <p class="hero-description">
+            Discover rare properties, iconic locations and a lifestyle crafted for a better tomorrow.
+          </p>
+
+          <!-- Action Buttons -->
+          <div class="hero-actions">
+            <a href="#featured-properties" class="btn-hero-primary">
+              <span>Explore Properties</span>
+              <span class="btn-arrow-circle">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+              </span>
+            </a>
+            <button type="button" class="btn-hero-story" id="heroStoryBtn" aria-label="Watch Our Story">
+              <span class="story-play-icon">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+              </span>
+              <span class="story-text">Watch Our Story</span>
+            </button>
+          </div>
+
+          <!-- 3 Statistics with Counter Animation -->
+          <div class="hero-stats">
+            <div class="stat-item">
+              <div class="stat-number"><span class="counter" data-target="50">50</span><span class="stat-plus">+</span></div>
+              <div class="stat-label">ICONIC PROJECTS</div>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <div class="stat-number"><span class="counter" data-target="15">15</span><span class="stat-plus">+</span></div>
+              <div class="stat-label">CITIES</div>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <div class="stat-number"><span class="counter" data-target="10">10</span><span class="stat-unit">K+</span></div>
+              <div class="stat-label">HAPPY FAMILIES</div>
+            </div>
+          </div>
+
+          <!-- Bottom: Overlapping Circular Landscape Images + Text -->
+          <div class="hero-bottom-stamp">
+            <div class="overlapping-avatars">
+              <div class="avatar-circle avatar-1">
+                <img src="assets/property-1.jpg" alt="Altair Landmark 1">
+              </div>
+              <div class="avatar-circle avatar-2">
+                <img src="assets/property-2.jpg" alt="Altair Landmark 2">
+              </div>
+              <div class="avatar-circle avatar-3">
+                <img src="assets/property-3.jpg" alt="Altair Landmark 3">
+              </div>
+            </div>
+            <div class="stamp-text">
+              <span>CRAFTING LANDMARKS</span>
+              <span>FOR GENERATIONS.</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- HERO RIGHT COLUMN (65-70% width) -->
+      <div class="hero-right">
+        
+        <!-- Large Cinematic Luxury Villa Image with Organic Curved Mask -->
+        <div class="hero-image-container">
+          <img src="assets/hero-villa.jpg" alt="Altair Luxury Villa with Infinity Pool and Sunset Views" class="hero-main-img" id="heroParallaxImg">
+          <div class="hero-image-overlay"></div>
+          
+          <!-- Organic Curved Mask Edge (Left) -->
+          <div class="hero-curve-mask" aria-hidden="true"></div>
+        </div>
+
+        <!-- Floating Translucent Dark Property Card -->
+        <div class="floating-property-card" id="floatingCard">
+          <div class="floating-card-badge">FEATURED RESIDENCE</div>
+          <div class="floating-card-body">
+            <div class="floating-card-thumb">
+              <img src="assets/property-1.jpg" alt="The Altair Heights Thumbnail">
+            </div>
+            <div class="floating-card-details">
+              <h3 class="floating-card-title">THE ALTAIR HEIGHTS</h3>
+              <p class="floating-card-loc">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                <span>MUMBAI</span>
+              </p>
+              <ul class="floating-card-specs">
+                <li>4 BHK Ultra Luxury Residences</li>
+                <li>Panoramic Sea Views</li>
+                <li>World-Class Amenities</li>
+              </ul>
+            </div>
+          </div>
+          <button type="button" class="floating-card-btn property-modal-trigger" data-property="mumbai" aria-label="View Details for The Altair Heights">
+            <span>Discover Residence</span>
+            <span class="circle-arrow-mini">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </span>
+          </button>
+        </div>
+
+        <!-- Right Narrow Vertical Sidebar Navigation Strip -->
+        <aside class="hero-vertical-sidebar" aria-label="Hero Highlights Strip">
+          <div class="sidebar-top-num">01</div>
+          
+          <div class="sidebar-nav-labels">
+            <span class="v-label">SPACES</span>
+            <span class="v-label">PEOPLE</span>
+            <span class="v-label">LIFESTYLE</span>
+            <span class="v-label">COMMUNITIES</span>
+            <span class="v-label accent">A BRIGHTER TOMORROW</span>
+          </div>
+
+          <div class="sidebar-divider"></div>
+
+          <!-- Circular Preview with Play Icon -->
+          <div class="sidebar-preview-wrap" id="sidebarVideoTrigger" title="Explore Our World">
+            <div class="sidebar-circle-preview">
+              <img src="assets/about-badge.jpg" alt="Altair Preview">
+              <span class="sidebar-play-icon">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+              </span>
+            </div>
+            <span class="sidebar-preview-text">Explore Our World</span>
+          </div>
+
+          <!-- Circular Prev / Next Arrows -->
+          <div class="sidebar-controls">
+            <button type="button" class="sidebar-ctrl-btn" id="sidebarPrevBtn" aria-label="Previous Highlight">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
+            </button>
+            <button type="button" class="sidebar-ctrl-btn" id="sidebarNextBtn" aria-label="Next Highlight">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </button>
+          </div>
+
+          <!-- Location Indicators -->
+          <div class="sidebar-locations">
+            <span class="sidebar-loc-dot active" data-city="Mumbai" title="Mumbai">MUM</span>
+            <span class="sidebar-loc-dot" data-city="Bangalore" title="Bangalore">BLR</span>
+            <span class="sidebar-loc-dot" data-city="Delhi" title="Delhi">DEL</span>
+            <span class="sidebar-loc-dot" data-city="Goa" title="Goa">GOA</span>
+          </div>
+        </aside>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       SECTION 02: SIGNATURE EXPERIENCES
+       =================================================================== -->
+  <section class="section-signature-experiences" id="signature-experiences">
+    <div class="container-wide">
+      <div class="signature-editorial-wrapper">
+        
+        <!-- Top Editorial Row -->
+        <div class="signature-top-bar">
+          <div class="signature-eyebrow-wrap">
+            <span class="eyebrow-small">PHILOSOPHY</span>
+            <h2 class="signature-heading">EXPERIENCE A HIGHER STANDARD.</h2>
+          </div>
+          <p class="signature-lead-text">
+            Every architectural gesture is crafted to heighten human potential, harmony with nature, and generational legacy.
+          </p>
+        </div>
+
+        <!-- 3-Column Magazine Spread Layout -->
+        <div class="signature-spread-grid">
+          
+          <!-- Left: Large Wide Luxury Living Room Photo with Asymmetrical Curved Right Edge -->
+          <div class="signature-image-col">
+            <div class="signature-image-wrapper">
+              <img src="assets/signature-living.jpg" alt="Altair Signature Grand Living Suite" class="signature-img">
+              <div class="signature-image-badge">
+                <span>SIGNATURE RESIDENCES</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Center: 4 Elegant Icon Columns -->
+          <div class="signature-center-col">
+            <div class="signature-icons-grid">
+              
+              <!-- Icon 1 -->
+              <div class="sig-icon-card">
+                <div class="sig-icon-circle">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
+                  </svg>
+                </div>
+                <h3 class="sig-icon-title">Breathtaking Locations</h3>
+                <p class="sig-icon-desc">Prime coastal cliffs, skyline panoramas and secluded natural sanctuaries.</p>
+              </div>
+
+              <!-- Icon 2 -->
+              <div class="sig-icon-card">
+                <div class="sig-icon-circle">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path>
+                    <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path>
+                  </svg>
+                </div>
+                <h3 class="sig-icon-title">Sustainable Living</h3>
+                <p class="sig-icon-desc">Net-zero carbon design, solar bioclimatic envelopes and water circularity.</p>
+              </div>
+
+              <!-- Icon 3 -->
+              <div class="sig-icon-card">
+                <div class="sig-icon-circle">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="6 3 18 3 22 9 12 22 2 9 6 3"></polygon>
+                    <path d="M11 3 8 9l4 13 4-13-3-6"></path>
+                    <path d="M2 9h20"></path>
+                  </svg>
+                </div>
+                <h3 class="sig-icon-title">World-Class Amenities</h3>
+                <p class="sig-icon-desc">Private clubhouses, bespoke spas, concierge helipads and wine cellars.</p>
+              </div>
+
+              <!-- Icon 4 -->
+              <div class="sig-icon-card">
+                <div class="sig-icon-circle">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="9" cy="7" r="4"></circle>
+                    <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                  </svg>
+                </div>
+                <h3 class="sig-icon-title">Vibrant Communities</h3>
+                <p class="sig-icon-desc">A curated enclave of like-minded visionaries, creators and leaders.</p>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Right: Bronze Rectangular Panel with Circular Arrow -->
+          <div class="signature-right-col">
+            <a href="communities.html" class="bronze-cta-panel">
+              <div class="panel-inner">
+                <div class="bronze-top-badge">OUR DESTINATIONS</div>
+                <h3 class="bronze-text">EXPLORE OUR COMMUNITIES.</h3>
+                <p class="bronze-sub">Discover hand-curated estates across Mumbai, Bangalore, Delhi and Goa.</p>
+                <div class="bronze-arrow-circle">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </div>
+              </div>
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       SECTION 03: FEATURED PROPERTIES
+       =================================================================== -->
+  <section class="section-featured-properties dark-theme-section" id="featured-properties">
+    <div class="properties-bg-texture" aria-hidden="true"></div>
+    <div class="container-wide">
+      
+      <div class="properties-split-layout">
+        
+        <!-- Left Column -->
+        <div class="properties-left-col">
+          <div class="eyebrow eyebrow-champagne">
+            <span class="eyebrow-dash bronze-dash"></span>
+            <span>FEATURED PROPERTIES</span>
+          </div>
+
+          <h2 class="section-heading-serif light-text">
+            Curated Residences<br>
+            <span class="italic-serif bronze-accent">in Exceptional Locations.</span>
+          </h2>
+
+          <p class="section-desc-light">
+            Each Altair property is an irreplaceable architectural landmark, blending timeless European craftsmanship with cutting-edge environmental engineering.
+          </p>
+
+          <div class="properties-cta-wrap">
+            <a href="properties.html" class="btn-pill-white">
+              <span>View All Properties</span>
+              <span class="circle-arrow-dark">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+              </span>
+            </a>
+          </div>
+
+          <!-- Slider Navigation & Pagination Indicator -->
+          <div class="property-slider-controls">
+            <div class="slider-arrows">
+              <button type="button" class="slider-btn prev-btn" id="propPrevBtn" aria-label="Previous Property Slide">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+              </button>
+              <button type="button" class="slider-btn next-btn" id="propNextBtn" aria-label="Next Property Slide">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </button>
+            </div>
+            <div class="slider-progress-wrapper">
+              <div class="slider-progress-track">
+                <div class="slider-progress-fill" id="propertyProgressFill"></div>
+              </div>
+              <div class="slider-pagination-text">
+                <span id="propCurrentSlide">01</span> / <span>03</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: 3 Luxury Property Cards Carousel -->
+        <div class="properties-right-col">
+          <div class="property-cards-viewport" id="propCardsViewport">
+            <div class="property-cards-track" id="propCardsTrack">
+              
+              <!-- CARD 1 -->
+              <article class="luxury-property-card visible-card" data-index="0">
+                <div class="card-image-box">
+                  <img src="assets/property-mumbai.jpg" alt="The Altair Heights, Mumbai" class="card-prop-img">
+                  <div class="card-overlay-gradient"></div>
+                  <span class="card-status-badge">SIGNATURE TOWER</span>
+                  <button type="button" class="card-arrow-btn property-modal-trigger" data-property="mumbai" aria-label="View The Altair Heights Details">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                  </button>
+                </div>
+                <div class="card-info-box">
+                  <div class="card-top-meta">
+                    <span class="card-location">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                      Mumbai
+                    </span>
+                    <span class="card-config">4 & 5 BHK Sky Mansions</span>
+                  </div>
+                  <h3 class="card-title"><a href="property-detail.html">The Altair Heights</a></h3>
+                  <div class="card-bottom-meta">
+                    <span class="card-price-label">Starting from</span>
+                    <span class="card-price">₹12.5 Cr</span>
+                  </div>
+                </div>
+              </article>
+
+              <!-- CARD 2 -->
+              <article class="luxury-property-card visible-card" data-index="1">
+                <div class="card-image-box">
+                  <img src="assets/property-goa.jpg" alt="Elysian Villa, Goa" class="card-prop-img">
+                  <div class="card-overlay-gradient"></div>
+                  <span class="card-status-badge">COASTAL SANCTUARY</span>
+                  <button type="button" class="card-arrow-btn property-modal-trigger" data-property="goa" aria-label="View Elysian Villa Details">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                  </button>
+                </div>
+                <div class="card-info-box">
+                  <div class="card-top-meta">
+                    <span class="card-location">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                      Goa
+                    </span>
+                    <span class="card-config">Private Pool Villas</span>
+                  </div>
+                  <h3 class="card-title"><a href="property-detail.html">Elysian Villa</a></h3>
+                  <div class="card-bottom-meta">
+                    <span class="card-price-label">Starting from</span>
+                    <span class="card-price">₹8.2 Cr</span>
+                  </div>
+                </div>
+              </article>
+
+              <!-- CARD 3 -->
+              <article class="luxury-property-card visible-card" data-index="2">
+                <div class="card-image-box">
+                  <img src="assets/property-bangalore.jpg" alt="The Grove Residences, Bangalore" class="card-prop-img">
+                  <div class="card-overlay-gradient"></div>
+                  <span class="card-status-badge">BOTANICAL ENCLAVE</span>
+                  <button type="button" class="card-arrow-btn property-modal-trigger" data-property="bangalore" aria-label="View The Grove Residences Details">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                  </button>
+                </div>
+                <div class="card-info-box">
+                  <div class="card-top-meta">
+                    <span class="card-location">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                      Bangalore
+                    </span>
+                    <span class="card-config">Garden Penthouses</span>
+                  </div>
+                  <h3 class="card-title"><a href="property-detail.html">The Grove Residences</a></h3>
+                  <div class="card-bottom-meta">
+                    <span class="card-price-label">Starting from</span>
+                    <span class="card-price">₹6.9 Cr</span>
+                  </div>
+                </div>
+              </article>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       SECTION 04: ABOUT ALTAIR
+       =================================================================== -->
+  <section class="section-about-altair" id="about-altair">
+    <div class="container-wide">
+      <div class="about-editorial-grid">
+        
+        <!-- Left: Text Content -->
+        <div class="about-text-col">
+          <div class="eyebrow">
+            <span class="eyebrow-dash"></span>
+            <span>ABOUT ALTAIR</span>
+          </div>
+
+          <h2 class="section-heading-serif">
+            Designing Landmarks<br>
+            <span class="italic-serif bronze-accent">for a Better Tomorrow.</span>
+          </h2>
+
+          <p class="about-paragraph">
+            At Altair, we create more than homes — we shape extraordinary living experiences through visionary design, sustainable development and an unwavering commitment to quality.
+          </p>
+
+          <p class="about-subparagraph">
+            Every blueprint begins with deep respect for natural topography, daylight cycles and heirloom craftsmanship. Our spaces breathe, evolve and endure across generations.
+          </p>
+
+          <div class="about-btn-wrap">
+            <a href="about.html" class="btn-editorial-pill">
+              <span>Our Story</span>
+              <span class="circle-arrow-mini">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Center: Large Architectural Photograph with Curved Corner Mask & Video Play Button -->
+        <div class="about-center-col">
+          <div class="about-main-image-wrap">
+            <img src="assets/about-main.jpg" alt="Altair Villa Architecture with Pool and Greenery" class="about-main-img">
+            
+            <!-- Video Play Button Overlay -->
+            <button type="button" class="about-play-overlay" id="aboutVideoPlayBtn" aria-label="Watch Our Story Video">
+              <span class="play-pulse-circle">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+              </span>
+              <span class="play-label-text">Watch Our Story</span>
+            </button>
+          </div>
+
+          <!-- Floating Beige-White Statistics Panel on the Right Side -->
+          <div class="floating-stats-panel">
+            <div class="stats-panel-item">
+              <span class="sp-num">25+</span>
+              <span class="sp-text">Years of Excellence</span>
+            </div>
+            <div class="sp-divider"></div>
+            <div class="stats-panel-item">
+              <span class="sp-num">100+</span>
+              <span class="sp-text">Expert Professionals</span>
+            </div>
+            <div class="sp-divider"></div>
+            <div class="stats-panel-item">
+              <span class="sp-num">15+</span>
+              <span class="sp-text">Cities Across India</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Supporting Interior Photo & Decorative Vertical Text -->
+        <div class="about-right-col">
+          <div class="about-interior-thumb">
+            <img src="assets/about-interior.jpg" alt="Altair Bespoke Luxury Architecture">
+            <div class="thumb-caption">MASTER SUITE ARCHITECTURE</div>
+          </div>
+
+          <div class="about-vertical-decorative">
+            <span class="v-word">ARCHITECTURE</span>
+            <span class="v-sep">•</span>
+            <span class="v-word">PEOPLE</span>
+            <span class="v-sep">•</span>
+            <span class="v-word">NATURE</span>
+            <span class="v-sep">•</span>
+            <span class="v-word v-highlight">A HARMONIOUS TOMORROW.</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       SECTION 05: THE ALTAIR LIFESTYLE
+       =================================================================== -->
+  <section class="section-lifestyle dark-green-section" id="altair-lifestyle">
+    <div class="lifestyle-botanical-bg" aria-hidden="true"></div>
+    <div class="container-wide">
+      
+      <div class="lifestyle-layout">
+        
+        <!-- Left: Text & Slide Indicators -->
+        <div class="lifestyle-left-col">
+          <div class="eyebrow eyebrow-champagne">
+            <span class="eyebrow-dash bronze-dash"></span>
+            <span>THE ALTAIR LIFESTYLE</span>
+          </div>
+
+          <h2 class="section-heading-serif light-text">
+            A Life of<br>
+            <span class="italic-serif bronze-accent">Unmatched Elegance.</span>
+          </h2>
+
+          <p class="section-desc-light">
+            From serene landscapes to world-class amenities, every detail is designed to elevate your everyday life.
+          </p>
+
+          <div class="lifestyle-cta-box">
+            <a href="amenities.html" class="btn-pill-champagne">
+              <span>Explore Lifestyle</span>
+              <span class="circle-arrow-green">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+              </span>
+            </a>
+          </div>
+
+          <!-- Small Slide Indicators Underneath -->
+          <div class="lifestyle-slide-indicators">
+            <div class="indicator-nums">
+              <span class="ind-active" id="lifestyleActiveNum">01</span>
+              <span class="ind-sep">/</span>
+              <span class="ind-total">03</span>
+            </div>
+            <div class="ind-track">
+              <div class="ind-fill" id="lifestyleIndFill"></div>
+            </div>
+            <div class="ind-label">WELLNESS • DINING • NATURE</div>
+          </div>
+        </div>
+
+        <!-- Right: 3 Large Vertical Image Cards with Rounded Asymmetric Edges -->
+        <div class="lifestyle-right-col">
+          <div class="lifestyle-cards-grid">
+            
+            <!-- CARD 1 -->
+            <div class="lifestyle-card active-card" data-index="0">
+              <div class="lifestyle-card-imgbox">
+                <img src="assets/lifestyle-wellness.jpg" alt="Luxurious indoor wellness and swimming pool" class="lifestyle-img">
+                <div class="lifestyle-card-num-badge">01</div>
+              </div>
+              <div class="lifestyle-card-caption">
+                <h3 class="lifestyle-card-title">Wellness & Recreation.</h3>
+                <p class="lifestyle-card-sub">Heated indoor hydrotherapy pools, restorative salt saunas and state-of-the-art movement studios.</p>
+              </div>
+            </div>
+
+            <!-- CARD 2 -->
+            <div class="lifestyle-card" data-index="1">
+              <div class="lifestyle-card-imgbox">
+                <img src="assets/lifestyle-dining.jpg" alt="Premium outdoor dining space overlooking villa" class="lifestyle-img">
+                <div class="lifestyle-card-num-badge">02</div>
+              </div>
+              <div class="lifestyle-card-caption">
+                <h3 class="lifestyle-card-title">Fine Dining & Leisure.</h3>
+                <p class="lifestyle-card-sub">Private Michelin-partnered catering pavilions, temperature-controlled wine vaults and starlit terraces.</p>
+              </div>
+            </div>
+
+            <!-- CARD 3 -->
+            <div class="lifestyle-card" data-index="2">
+              <div class="lifestyle-card-imgbox">
+                <img src="assets/lifestyle-garden.jpg" alt="Landscaped luxury residential garden" class="lifestyle-img">
+                <div class="lifestyle-card-num-badge">03</div>
+              </div>
+              <div class="lifestyle-card-caption">
+                <h3 class="lifestyle-card-title">Nature & Open Spaces.</h3>
+                <p class="lifestyle-card-sub">Acreage of biodiverse sensory groves, reflective lotus lagoons and meditative pine walking trails.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       SECTION 06: WORLD-CLASS AMENITIES
+       =================================================================== -->
+  <section class="section-amenities" id="world-class-amenities">
+    <div class="container-wide">
+      
+      <div class="amenities-triptych-layout">
+        
+        <!-- Left Area -->
+        <div class="amenities-left-col">
+          <div class="eyebrow">
+            <span class="eyebrow-dash"></span>
+            <span>WORLD-CLASS AMENITIES</span>
+          </div>
+
+          <h2 class="section-heading-serif">
+            Every Comfort<br>
+            <span class="italic-serif bronze-accent">Thoughtfully Curated.</span>
+          </h2>
+
+          <p class="about-paragraph">
+            At Altair, we create more than homes — we shape destinations that bring exceptional comfort, wellness and community together.
+          </p>
+
+          <div class="amenities-btn-wrap">
+            <a href="amenities.html" class="btn-editorial-pill">
+              <span>Explore Amenities</span>
+              <span class="circle-arrow-mini">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Center Area: Large Soft Beige Organic-Shaped Panel with 8 Bronze Line Icons (4x2) -->
+        <div class="amenities-center-col">
+          <div class="organic-amenities-panel">
+            <div class="amenities-grid-4x2">
+              
+              <!-- 1. Infinity Pool -->
+              <div class="amenity-item visible-amenity">
+                <div class="amenity-icon-box">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5c2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"></path>
+                    <path d="M2 12c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"></path>
+                    <path d="M2 18c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"></path>
+                  </svg>
+                </div>
+                <h4 class="amenity-name">Infinity Pool</h4>
+                <p class="amenity-detail">Temperature regulated sea-facing lap pool</p>
+              </div>
+
+              <!-- 2. Private Clubhouse -->
+              <div class="amenity-item visible-amenity">
+                <div class="amenity-icon-box">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="m2 4 3 12h14l3-12-6 7-4-7-4 7-6-7zm3 16h14"></path>
+                  </svg>
+                </div>
+                <h4 class="amenity-name">Private Clubhouse</h4>
+                <p class="amenity-detail">Members-only dining & cigar lounge</p>
+              </div>
+
+              <!-- 3. Fitness Center -->
+              <div class="amenity-item visible-amenity">
+                <div class="amenity-icon-box">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="m6.5 6.5 11 11"></path>
+                    <path d="m21 21-1-1a5 5 0 0 0-7.07 0l-.71.71a5 5 0 0 1-7.07 0L4 19.5"></path>
+                    <path d="m3 3 1 1a5 5 0 0 0 7.07 0l.71-.71a5 5 0 0 1 7.07 0L20 4.5"></path>
+                  </svg>
+                </div>
+                <h4 class="amenity-name">Fitness Center</h4>
+                <p class="amenity-detail">Technogym biometric training equipment</p>
+              </div>
+
+              <!-- 4. Landscaped Gardens -->
+              <div class="amenity-item visible-amenity">
+                <div class="amenity-icon-box">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="3"></circle>
+                    <path d="M12 2a4.5 4.5 0 0 0-4.5 4.5c0 1.25.5 2.4 1.3 3.2L12 12"></path>
+                    <path d="M12 2a4.5 4.5 0 0 1 4.5 4.5c0 1.25-.5 2.4-1.3 3.2L12 12"></path>
+                    <path d="M12 22a4.5 4.5 0 0 0 4.5-4.5c0-1.25-.5-2.4-1.3-3.2L12 12"></path>
+                    <path d="M12 22a4.5 4.5 0 0 1-4.5-4.5c0-1.25.5-2.4 1.3-3.2L12 12"></path>
+                  </svg>
+                </div>
+                <h4 class="amenity-name">Landscaped Gardens</h4>
+                <p class="amenity-detail">Indigenous Zen botanicals & sculptures</p>
+              </div>
+
+              <!-- 5. Kids Play Area -->
+              <div class="amenity-item visible-amenity">
+                <div class="amenity-icon-box">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <path d="M8 14s1.5 2 4 2 4-2 4-2"></path>
+                    <line x1="9" y1="9" x2="9.01" y2="9"></line>
+                    <line x1="15" y1="9" x2="15.01" y2="9"></line>
+                  </svg>
+                </div>
+                <h4 class="amenity-name">Kids Play Area</h4>
+                <p class="amenity-detail">Natural timber interactive play grove</p>
+              </div>
+
+              <!-- 6. Business Lounge -->
+              <div class="amenity-item visible-amenity">
+                <div class="amenity-icon-box">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                    <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                  </svg>
+                </div>
+                <h4 class="amenity-name">Business Lounge</h4>
+                <p class="amenity-detail">Private boardrooms with video suites</p>
+              </div>
+
+              <!-- 7. Spa & Wellness -->
+              <div class="amenity-item visible-amenity">
+                <div class="amenity-icon-box">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z"></path>
+                  </svg>
+                </div>
+                <h4 class="amenity-name">Spa & Wellness</h4>
+                <p class="amenity-detail">Ayurvedic therapies & sauna sanctuary</p>
+              </div>
+
+              <!-- 8. 24/7 Security -->
+              <div class="amenity-item visible-amenity">
+                <div class="amenity-icon-box">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                    <path d="m9 12 2 2 4-4"></path>
+                  </svg>
+                </div>
+                <h4 class="amenity-name">24/7 Security</h4>
+                <p class="amenity-detail">Discreet multi-tier biometric surveillance</p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Area: Large Photo with Curved Left Edges + Smaller Circular Thumbnail + Decorative Text -->
+        <div class="amenities-right-col">
+          <div class="amenities-photo-card">
+            <img src="assets/amenities.jpg" alt="Altair World-Class Clubhouse Architecture" class="amenities-main-photo">
+          </div>
+          
+          <div class="amenities-thumb-row">
+            <div class="amenities-circle-thumb">
+              <img src="assets/about-badge.jpg" alt="Altair Architectural Detail">
+            </div>
+            <div class="amenities-decorative-quote">
+              <span class="decor-line"></span>
+              <span class="decor-text">SPACES THAT INSPIRE A BETTER YOU.</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       SECTION 07: PRIME LOCATIONS
+       =================================================================== -->
+  <section class="section-locations dark-theme-section" id="prime-locations">
+    <div class="locations-bg-cinematic" aria-hidden="true"></div>
+    <div class="container-wide">
+      
+      <div class="locations-split-layout">
+        
+        <!-- Left: Eyebrow, Heading, Description & Button -->
+        <div class="locations-left-col">
+          <div class="eyebrow eyebrow-champagne">
+            <span class="eyebrow-dash bronze-dash"></span>
+            <span>PRIME LOCATIONS</span>
+          </div>
+
+          <h2 class="section-heading-serif light-text">
+            Exceptional<br>
+            <span class="italic-serif bronze-accent">Destinations.</span>
+          </h2>
+
+          <p class="section-desc-light">
+            Our projects are located in the most desirable cities, offering the perfect blend of connectivity, convenience and an elevated lifestyle.
+          </p>
+
+          <div class="locations-cta-wrap">
+            <a href="communities.html" class="btn-pill-white">
+              <span>Explore Locations</span>
+              <span class="circle-arrow-dark">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+              </span>
+            </a>
+          </div>
+          
+          <div class="destinations-summary-tag">
+            <span>4 ICONIC HUBS ACROSS INDIA</span>
+          </div>
+        </div>
+
+        <!-- Right: 4 Tall Vertical Destination Cards -->
+        <div class="locations-right-col">
+          <div class="destinations-grid">
+            
+            <!-- Card 1: Mumbai -->
+            <article class="destination-card visible-dest" data-city="Mumbai">
+              <div class="dest-img-box">
+                <img src="assets/location-mumbai.jpg" alt="Mumbai Skyline" class="dest-img">
+                <div class="dest-overlay-gradient"></div>
+              </div>
+              <div class="dest-content">
+                <div class="dest-badge">MAHARASHTRA</div>
+                <h3 class="dest-city-title">MUMBAI</h3>
+                <p class="dest-city-tagline">Iconic Skyline.</p>
+                <div class="dest-action-row">
+                  <span class="dest-explore-label">Explore Projects</span>
+                  <span class="dest-arrow-circle">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                  </span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 2: Bangalore -->
+            <article class="destination-card visible-dest" data-city="Bangalore">
+              <div class="dest-img-box">
+                <img src="assets/location-bangalore.jpg" alt="Bangalore Vibrant Living" class="dest-img">
+                <div class="dest-overlay-gradient"></div>
+              </div>
+              <div class="dest-content">
+                <div class="dest-badge">KARNATAKA</div>
+                <h3 class="dest-city-title">BANGALORE</h3>
+                <p class="dest-city-tagline">Vibrant Living.</p>
+                <div class="dest-action-row">
+                  <span class="dest-explore-label">Explore Projects</span>
+                  <span class="dest-arrow-circle">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                  </span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 3: Delhi -->
+            <article class="destination-card visible-dest" data-city="Delhi">
+              <div class="dest-img-box">
+                <img src="assets/location-delhi.jpg" alt="Delhi Modern Heritage" class="dest-img">
+                <div class="dest-overlay-gradient"></div>
+              </div>
+              <div class="dest-content">
+                <div class="dest-badge">NCR CAPITAL</div>
+                <h3 class="dest-city-title">DELHI</h3>
+                <p class="dest-city-tagline">Modern Heritage.</p>
+                <div class="dest-action-row">
+                  <span class="dest-explore-label">Explore Projects</span>
+                  <span class="dest-arrow-circle">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                  </span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 4: Goa -->
+            <article class="destination-card visible-dest" data-city="Goa">
+              <div class="dest-img-box">
+                <img src="assets/location-goa.jpg" alt="Goa Serene Escapes" class="dest-img">
+                <div class="dest-overlay-gradient"></div>
+              </div>
+              <div class="dest-content">
+                <div class="dest-badge">COASTAL HAVEN</div>
+                <h3 class="dest-city-title">GOA</h3>
+                <p class="dest-city-tagline">Serene Escapes.</p>
+                <div class="dest-action-row">
+                  <span class="dest-explore-label">Explore Projects</span>
+                  <span class="dest-arrow-circle">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                  </span>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       SECTION 08: RESIDENT TESTIMONIALS
+       =================================================================== -->
+  <section class="section-testimonials" id="residents-testimonials">
+    <div class="container-wide">
+      
+      <div class="testimonials-triptych-layout">
+        
+        <!-- Left: Text -->
+        <div class="testimonials-left-col">
+          <div class="eyebrow">
+            <span class="eyebrow-dash"></span>
+            <span>OUR RESIDENTS</span>
+          </div>
+
+          <h2 class="section-heading-serif">
+            A Community That<br>
+            <span class="italic-serif bronze-accent">Inspires.</span>
+          </h2>
+
+          <p class="about-paragraph">
+            Hear from our residents who have found more than a home — a better way of life at Altair.
+          </p>
+
+          <div class="testimonial-stats-box">
+            <span class="t-stat-num">98.4%</span>
+            <span class="t-stat-label">Resident Satisfaction Rating Across All Estates</span>
+          </div>
+        </div>
+
+        <!-- Center: Large Rounded Testimonial Panel with Slider -->
+        <div class="testimonials-center-col">
+          <div class="testimonial-card-panel">
+            
+            <div class="quote-mark-icon">“</div>
+            
+            <div class="testimonial-slider" id="testimonialSlider">
+              
+              <!-- Slide 1 -->
+              <div class="testimonial-slide active">
+                <p class="testimonial-quote">
+                  "Altair Heights has completely redefined the meaning of home for us. The sea breeze, the floor-to-ceiling glass pavilions, and the sheer discretion of the concierge team ensure every evening feels like a retreat from the world."
+                </p>
+                <div class="testimonial-author-meta">
+                  <h4 class="author-name">Dr. Rajesh & Sunita Singhania</h4>
+                  <p class="author-property">Residents at The Altair Heights, Mumbai</p>
+                </div>
+              </div>
+
+              <!-- Slide 2 -->
+              <div class="testimonial-slide">
+                <p class="testimonial-quote">
+                  "The architectural purity of Elysian Villa in Goa is unmatched. Altair created a tropical sanctuary where our children grow alongside organic orchards, while we host global friends in serene luxury."
+                </p>
+                <div class="testimonial-author-meta">
+                  <h4 class="author-name">Vikram Malhotra</h4>
+                  <p class="author-property">Resident at Elysian Villa, Goa</p>
+                </div>
+              </div>
+
+              <!-- Slide 3 -->
+              <div class="testimonial-slide">
+                <p class="testimonial-quote">
+                  "The Grove Bangalore combines botanical tranquility with effortless smart home technology. It is rare to find a developer who fulfills every architectural promise with such meticulous perfection."
+                </p>
+                <div class="testimonial-author-meta">
+                  <h4 class="author-name">Ananya & Kabir Roy</h4>
+                  <p class="author-property">Residents at The Grove, Bangalore</p>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Previous / Next Circular Controls -->
+            <div class="testimonial-controls">
+              <button type="button" class="t-ctrl-btn" id="tPrevBtn" aria-label="Previous Testimonial">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
+              </button>
+              <div class="testimonial-dots" id="tDots">
+                <span class="t-dot active" data-index="0"></span>
+                <span class="t-dot" data-index="1"></span>
+                <span class="t-dot" data-index="2"></span>
+              </div>
+              <button type="button" class="t-ctrl-btn" id="tNextBtn" aria-label="Next Testimonial">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </button>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Right: Family Photograph with Play Icon Overlay -->
+        <div class="testimonials-right-col">
+          <div class="resident-photo-card" id="residentVideoTrigger">
+            <img src="assets/testimonial.jpg" alt="Happy family enjoying their luxury home at Altair" class="resident-photo">
+            
+            <div class="resident-play-badge">
+              <span class="r-play-circle">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+              </span>
+              <span class="r-play-text">Hear Our Residents</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       SECTION 09: FINAL CTA
+       =================================================================== -->
+  <section class="section-final-cta dark-green-section" id="final-cta">
+    <div class="cta-villa-bg">
+      <img src="assets/cta-villa.jpg" alt="Illuminated luxury villa surrounded by lush landscaping" class="cta-bg-img" id="ctaParallaxImg">
+      <div class="cta-gradient-overlay"></div>
+    </div>
+
+    <div class="container-wide">
+      <div class="final-cta-layout">
+        
+        <!-- Left: Eyebrow & Large Heading -->
+        <div class="cta-left-col">
+          <div class="eyebrow eyebrow-champagne">
+            <span class="eyebrow-dash bronze-dash"></span>
+            <span>LET'S BUILD YOUR TOMORROW.</span>
+          </div>
+
+          <h2 class="cta-huge-heading">
+            Find Your<br>
+            <span class="italic-serif bronze-accent">Dream Home.</span>
+          </h2>
+        </div>
+
+        <!-- Right: Supporting Text, Champagne-Bronze Pill Button & 3 Overlapping Images -->
+        <div class="cta-right-col">
+          <p class="cta-description">
+            Take the first step towards an extraordinary lifestyle. Schedule a personalized site visit with our experts today.
+          </p>
+
+          <div class="cta-actions-row">
+            <button type="button" class="btn-pill-champagne-large modal-trigger-btn" id="finalCtaScheduleBtn">
+              <span>Schedule a Visit</span>
+              <span class="circle-arrow-green">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+              </span>
+            </button>
+          </div>
+
+          <!-- 3 Small Overlapping Circular Property Images -->
+          <div class="cta-overlap-row">
+            <div class="cta-avatars">
+              <div class="cta-avatar-c c-1">
+                <img src="assets/property-1.jpg" alt="Altair Sky Mansions">
+              </div>
+              <div class="cta-avatar-c c-2">
+                <img src="assets/property-2.jpg" alt="Altair Coastal Enclave">
+              </div>
+              <div class="cta-avatar-c c-3">
+                <img src="assets/property-3.jpg" alt="Altair Garden Penthouses">
+              </div>
+            </div>
+            <div class="cta-overlap-caption">
+              <span>PRIVATE SHOWCASE TOURS AVAILABLE DAILY</span>
+              <span class="sub-caption">Discreet Chauffeur Service on Request</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       SECTION 10: PREMIUM FOOTER
+       =================================================================== -->
+  <footer class="altair-footer" id="altair-footer">
+    <div class="container-wide">
+      
+      <!-- Top Row: Logo, Nav, Socials -->
+      <div class="footer-top-row">
+        
+        <!-- Left: Logo -->
+        <div class="footer-left">
+          <a href="#hero" class="footer-brand" aria-label="Altair Residences Home">
+            <span class="brand-title">ALTAIR</span>
+            <span class="brand-subtitle">RESIDENCES</span>
+          </a>
+          <p class="footer-tagline">Extraordinary Living.</p>
+        </div>
+
+        <!-- Center: Links -->
+        <div class="footer-center">
+          <ul class="footer-nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="properties.html">Properties</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="amenities.html">Amenities</a></li>
+            <li><a href="communities.html">Communities</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Right: Social Media Icons -->
+        <div class="footer-right">
+          <div class="footer-social-icons">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Altair on Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Altair on Facebook">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Altair on LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Altair on YouTube">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Thin Horizontal Divider -->
+      <div class="footer-divider"></div>
+
+      <!-- Bottom Row: Copyright, Legal & Decorative Tagline -->
+      <div class="footer-bottom-row">
+        <div class="footer-copy">
+          © 2026 Altair Residences. All rights reserved.
+        </div>
+
+        <div class="footer-decorative-tagline">
+          SPACES FOR A BRIGHTER TOMORROW.
+        </div>
+
+        <div class="footer-legal-links">
+          <a href="#" class="legal-link" id="privacyPolicyBtn">Privacy Policy</a>
+          <span class="legal-sep">•</span>
+          <a href="#" class="legal-link" id="termsServiceBtn">Terms of Service</a>
+        </div>
+      </div>
+
+
+      <!-- Footer Credit -->
+      <div class="footer-credit">
+        Altair Residences | Made with <span class="credit-heart">&#10084;</span> by <a href="#" class="credit-link">Regortz</a>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ===================================================================
+       INTERACTIVE MODALS & OVERLAYS
+       =================================================================== -->
+  
+  <!-- 1. SCHEDULE A VISIT MODAL -->
+  <div class="modal-backdrop" id="scheduleModal" aria-hidden="true">
+    <div class="modal-card">
+      <button type="button" class="modal-close-btn" id="scheduleModalClose" aria-label="Close modal">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+
+      <div class="modal-header">
+        <div class="eyebrow eyebrow-champagne">
+          <span class="eyebrow-dash bronze-dash"></span>
+          <span>PRIVATE CONCIERGE</span>
+        </div>
+        <h3 class="modal-title">Schedule a Private Residence Tour</h3>
+        <p class="modal-subtitle">Experience Altair's architectural excellence in person. Personalized private viewings available across our prime estates.</p>
+      </div>
+
+      <form class="schedule-form" id="scheduleVisitForm">
+        <div class="form-grid">
+          
+          <div class="form-group">
+            <label for="propertySelect">Select Residence *</label>
+            <select id="propertySelect" required>
+              <option value="mumbai">The Altair Heights — Mumbai (₹12.5 Cr+)</option>
+              <option value="goa">Elysian Villa — Goa (₹8.2 Cr+)</option>
+              <option value="bangalore">The Grove Residences — Bangalore (₹6.9 Cr+)</option>
+              <option value="delhi">Altair Imperial Pavilion — Delhi (₹14.0 Cr+)</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="visitDate">Preferred Date *</label>
+            <input type="date" id="visitDate" required min="2026-11-01">
+          </div>
+
+          <div class="form-group">
+            <label for="visitTime">Preferred Time Slot *</label>
+            <select id="visitTime" required>
+              <option value="morning">Morning Sanctuary Tour (10:00 AM)</option>
+              <option value="afternoon">Afternoon Natural Daylight Tour (02:00 PM)</option>
+              <option value="sunset" selected>Golden Hour Sunset Tour (05:00 PM)</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="clientName">Full Name *</label>
+            <input type="text" id="clientName" placeholder="e.g. Lord Alistair Vance" required>
+          </div>
+
+          <div class="form-group">
+            <label for="clientEmail">Email Address *</label>
+            <input type="email" id="clientEmail" placeholder="e.g. alistair@vance-holdings.com" required>
+          </div>
+
+          <div class="form-group">
+            <label for="clientPhone">Contact Number *</label>
+            <input type="tel" id="clientPhone" placeholder="+91 98200 XXXXX" required>
+          </div>
+
+        </div>
+
+        <div class="form-check-group">
+          <input type="checkbox" id="chauffeurCheck" checked>
+          <label for="chauffeurCheck">Request complimentary executive Mercedes Maybach / Range Rover chauffeur pickup</label>
+        </div>
+
+        <div class="modal-form-actions">
+          <button type="submit" class="btn-pill-champagne-large full-width" id="submitTourBtn">
+            <span>Confirm Private Site Visit</span>
+            <span class="circle-arrow-green">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            </span>
+          </button>
+        </div>
+      </form>
+
+      <!-- Success Notification View -->
+      <div class="modal-success-state" id="modalSuccessState">
+        <div class="success-icon-circle">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+        </div>
+        <h4 class="success-title">Your Private Tour is Confirmed</h4>
+        <p class="success-desc">
+          An Altair Senior Relationship Director will contact you within two hours to finalize your tailored itinerary and chauffeur arrangement.
+        </p>
+        <button type="button" class="btn-editorial-pill" id="closeSuccessBtn">
+          <span>Return to Altair</span>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 2. WATCH OUR STORY VIDEO MODAL -->
+  <div class="modal-backdrop" id="videoModal" aria-hidden="true">
+    <div class="video-modal-card">
+      <button type="button" class="video-modal-close" id="videoModalClose" aria-label="Close video">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+
+      <div class="video-container">
+        <div class="video-mockup">
+          <img src="assets/cta-villa.jpg" alt="Altair Cinematic Villa Showcase" class="video-bg-img">
+          <div class="video-overlay-player">
+            <div class="video-brand-tag">ALTAIR RESIDENCES ARCHITECTURAL CINEMA</div>
+            <div class="video-center-controls">
+              <div class="video-play-large" id="playToggleBtn">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+              </div>
+            </div>
+            <div class="video-bottom-bar">
+              <span class="v-time">01:42 / 03:50</span>
+              <div class="v-progress-track">
+                <div class="v-progress-bar"></div>
+              </div>
+              <span class="v-quality">4K MASTER ARCHIVE</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. PROPERTY QUICK VIEW MODAL -->
+  <div class="modal-backdrop" id="propertyDetailModal" aria-hidden="true">
+    <div class="prop-detail-card">
+      <button type="button" class="modal-close-btn" id="propDetailClose" aria-label="Close property detail">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+
+      <div class="prop-detail-layout">
+        <div class="prop-detail-gallery">
+          <img src="assets/property-mumbai.jpg" alt="Property Detail Image" id="modalPropImage" class="detail-main-img">
+        </div>
+        <div class="prop-detail-content">
+          <div class="eyebrow">
+            <span class="eyebrow-dash"></span>
+            <span id="modalPropLocation">MUMBAI</span>
+          </div>
+          <h3 class="prop-detail-title" id="modalPropTitle">The Altair Heights</h3>
+          <p class="prop-detail-price" id="modalPropPrice">₹12.5 Cr onwards</p>
+          <p class="prop-detail-desc" id="modalPropDesc">
+            Rising above the Arabian coastline, The Altair Heights offers 52 limited-edition sky mansions with double-height ceiling voids, private infinity plunge pools, and uninterrupted ocean sunsets.
+          </p>
+
+          <div class="prop-detail-specs-grid">
+            <div class="spec-cell">
+              <span class="spec-label">Configuration</span>
+              <span class="spec-val" id="modalPropConfig">4 & 5 BHK</span>
+            </div>
+            <div class="spec-cell">
+              <span class="spec-label">Carpet Area</span>
+              <span class="spec-val" id="modalPropArea">4,800 – 7,200 sq.ft.</span>
+            </div>
+            <div class="spec-cell">
+              <span class="spec-label">Handover</span>
+              <span class="spec-val">Q4 2026</span>
+            </div>
+            <div class="spec-cell">
+              <span class="spec-label">Certification</span>
+              <span class="spec-val">IGBC Platinum Net-Zero</span>
+            </div>
+          </div>
+
+          <div class="prop-detail-actions">
+            <button type="button" class="btn-primary-bronze modal-trigger-btn" id="modalBookTourBtn">
+              <span>Book Private Showcase</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. LEGAL & PRIVACY CHARTER MODAL -->
+  <div class="modal-backdrop" id="legalModal" aria-hidden="true">
+    <div class="modal-card" style="max-width: 580px;">
+      <button type="button" class="modal-close-btn" id="legalModalClose" aria-label="Close legal modal">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+
+      <div class="modal-header">
+        <div class="eyebrow eyebrow-champagne">
+          <span class="eyebrow-dash bronze-dash"></span>
+          <span id="legalModalEyebrow">PRIVACY CHARTER</span>
+        </div>
+        <h3 class="modal-title" id="legalModalTitle">Discretion & Privacy Commitment</h3>
+        <p class="modal-subtitle" id="legalModalContent" style="margin-top: 14px; line-height: 1.7;">
+          Altair Residences operates under sovereign-tier confidentiality protocols. All client records, private site visit inquiries, and financial communications are protected under 256-bit AES encryption. We never broker, share, or monetize resident identities.
+        </p>
+      </div>
+
+      <div class="modal-form-actions" style="margin-top: 24px;">
+        <button type="button" class="btn-pill-champagne-large full-width" id="legalAcknowledgeBtn">
+          <span>Acknowledge Charter</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Interactive Luxury Toast Notification -->
+  <div class="luxury-toast" id="luxuryToast" aria-live="polite"></div>
+
+  <!-- Main JavaScript -->
+  <script src="js/script.js"></script>
+</body>
+</html>
